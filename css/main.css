@@ -1,0 +1,170 @@
+* {
+  /* used to reset empty space around border set by browser */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-content {
+    position: relative;
+    top: 0;
+    width: 100%;
+    font-family:
+    Serif Georgia,
+    "Times New Roman",
+    Times,
+    serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 1em;
+  background-color: #0d1b2a;
+  display: flex;
+  align-items: center;
+  gap: 5em;
+  padding-left: 35%;
+  border-bottom: 4px solid gold;
+}
+
+.navbar-content li a {
+  color: gold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85em;
+  width: auto;
+  height: auto;
+  padding: 1.2em 0.5em;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.4em;
+}
+
+.nav-links p {
+  color: gold;
+  font-size: 0.85em;
+  width: 4em;
+}
+.navbar-content li a:hover {
+  background-color: rgba(255, 217, 0, 0.308);
+  border-radius: 1em;
+}
+
+.navbar-content .logo a:hover {
+  background-color: transparent;
+}
+
+.logo img {
+  display: block;
+  float: left;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown1-content {
+  display: none;
+  background-color: #101d2c;
+  position: absolute;
+  min-width: 100px;
+  border-radius: 0.3em;
+}
+
+.dropdown button {
+  background-color: #0d1b2a;
+  color: gold;
+  padding: 1.2em 0.5em;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85em;
+}
+
+.dropdown a {
+  text-transform: uppercase;
+  display: block;
+  color: gold;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.dropdown:hover .dropdown1-content {
+  display: block;
+}
+
+.banner{
+  background-color: #132233;
+  padding: 3em 3em
+}
+
+.banner h1 {
+  color: gold;
+  font-size: 2em;
+  padding-left: 20%
+}
+
+.banner p {
+  color: #6e7d8f;
+  font-size: 1em;
+  padding-top: 1%;
+  padding-left: 20%;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+  background-color: #f5f0e8;
+  padding: 3em 3em
+}
+
+.main-text h1 {
+  margin: 0 auto;
+  color: black;
+  font-size: 2em;
+}
+
+.main-text p {
+  margin: 0 auto;
+  color: #6e7d8f;
+  font-size:1em ;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+table {
+  margin: 0 auto;
+  width:50%;
+  border-radius: 1px;
+  border-collapse: collapse;
+}
+th,td{
+  border-collapse: collapse;
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid white
+}
+
+th{
+  color: gold;
+  background-color: #0d1b2a;
+}
+tr{
+  background-color: rgb(255, 249, 249);
+}
+
+table button {
+  background-color: gold;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+}
