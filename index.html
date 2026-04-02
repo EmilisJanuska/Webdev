@@ -4,31 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="SlickNav-master/dist/slicknav.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="SlickNav-master/dist/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+          });
+    </script>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <ul class="navbar-content">
+    <div class="page-wrapper">
+      <header>
+
+        <div id="mobile_menu"></div>
+
+        <nav class="navbar">
+        <ul class="navbar-content" id="nav_menu">
           <div class="nav-links">
+            <ul>
             <li class="logo">
               <a href="index.html"><img src="images/logo3.png" alt="LOGO" /></a>
             </li>
+            </ul>
             <p>UK CITY TOURS</p>
             <li><a href="index.html">Home</a></li>
 
             <div class="dropdown">
               <button>Tours ▾</button>
               <div class="dropdown1-content">
-                <li><a href="#prices"">All tours</a></li>
-                <li><a href="london.html">London</a></li>
-                <li><a href="scotland.html">Scotland</a></li>
+                <li><a href="#prices">All tours</a></li>
               </div>
             </div>
 
             <div class="dropdown">
               <button>About ▾</button>
               <div class="dropdown1-content">
-                <li><a href="outstory.html">Our story</a></li>
+                <li><a href="ourstory.html">Our story</a></li>
                 <li><a href="team.html">Our team</a></li>
               </div>
             </div>
@@ -36,11 +48,12 @@
             <div class="dropdown">
               <button>Events ▾</button>
               <div class="dropdown1-content">
-                <li><a href="allevents.html">All events</a></li>
-                <li><a href="deals.html">Deals & Discounts</a></li>
+                <li><a href="events.html">All events</a></li>
+                <li><a href="events.html">Deals</a></li>
+                <li><a href="events.html#discounts">Discounts</a></li>
+
               </div>
             </div>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="register.html">Register</a></li>
           </div>
         </ul>
@@ -50,12 +63,20 @@
         <h1>Tours & Prices</h1>
         <p>Choose from our 20 expert guided city tours across the UK</p>
       </div>
+      <div class="banner2">
+          <h2>Our cities:</h2>
+            <span class="cities">
+              Bath · Birmingham · Brighton · Edinburgh · Glasgow · 
+              Liverpool · London · Manchester · Oxford · York
+            </span>
+      </div>
     </header>
     <main>
       <div class="main-text">
         <h1>Complete Tour Catalogue</h1>
         <p>Prices are per person - contact us for details.</p>
-        <table>
+        <div class="table-wrapper">
+        <table class="table">
           <thead id="prices">
             <tr>
               <th>#</th>
@@ -208,6 +229,25 @@
             </tr>
           </tbody>
         </table>
+        <aside class="sidebar">
+    <div class="sidebar-card">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="events.html">All Events</a></li>
+        <li><a href="events.html">Current Deals</a></li>
+        <li><a href="ourstory.html">Our Story</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Daily News</h3>
+      <p>New tours added for Summer 2026</p>
+    </div>
+  </aside>
+</div>
+
       </div>
       <div class="why-text">
         <h2>Why choose us?</h2>
@@ -217,21 +257,13 @@
           felis, placerat a iaculis non, rhoncus quis nunc. Proin eleifend quam
           nulla, nec pellentesque odio posuere et. In mollis sodales elit, ut
           vulputate mi luctus ac. Ut eget dictum urna, eget rhoncus mauris.
-          Nullam ut rutrum lectus, fringilla sagittis tortor. Ut dictum, lorem
-          eu tempus euismod, mauris sapien laoreet turpis, ac rhoncus quam neque
-          eget mauris. Cras efficitur interdum quam, ac mattis sapien commodo
-          quis. Morbi quis nisl venenatis, sagittis ante et, euismod leo. Nunc
-          viverra dolor et hendrerit vulputate. Fusce ac interdum nisi. Integer
-          venenatis iaculis odio a elementum. Etiam tincidunt tellus ut odio
-          sagittis, vitae tempor odio pharetra. Sed sit amet purus sed lacus
-          pulvinar porttitor sed sit amet mi.
         </p>
       </div>
     <div class="customer-section">
       <h2>What customers say</h2>
       <div class="team-grid">     
           <div class="card">
-              <img src="/images/Spongebob.png" alt="avater"">
+              <img src="/images/person1.jpg" alt="avater"">
               <div class="container">
                   <h4> <b>Lisa H.</b></h4>
                   <p>
@@ -241,7 +273,7 @@
               </div>
           </div>
               <div class="card">
-              <img src="/images/squidward.png" alt="avater"">
+              <img src="/images/person1.jpg" alt="avater"">
               <div class="container">
                   <h4> <b>Carlos M</b></h4>
                     <p>“I loved the Edinburgh Castle Tour. The history was fascinating, and the views were
@@ -250,7 +282,7 @@
               </div>
           </div>
               <div class="card">
-              <img src="/images/Patrick.png" alt="avater"">
+              <img src="/images/person1.jpg" alt="avater"">
               <div class="container">
                   <h4> <b>Aisha R.</b></h4>
                   <p>“The staff at UK City Tour is incredibly helpful. They made sure our tour was smooth and
@@ -261,10 +293,9 @@
       </div>
     </div>
 
-    </main>
       <footer class="footer">
     <div class="footer-container">
-      <div class="footer-row">k
+      <div class="footer-row">
         <div class="footer-item">
           <h3>Uk City Tour</h3>
           <p>Slogan here</p>
@@ -283,11 +314,13 @@
           <ul>
             <li><a href="/">Privacy Policy</a></li>
             <li><a href="/">Terms & Conditons</a></li>
+            <li>&copy; 2025 UK City Tours. All rights reserved.</li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
+  </div>
   </body>
 
 </html>
